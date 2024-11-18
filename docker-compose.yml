@@ -61,7 +61,7 @@ services:
       - "traefik.enable=true"
       - "traefik.constraint-label-stack=appwrite"
       - "traefik.docker.network=appwrite"
-      - "traefik.http.services.appwrite_api.loadbalancer.server.port=80"
+      - "traefik.http.services.appwrite_api.loadbalancer.server.port=3001"
       #http
       - traefik.http.routers.appwrite_api_http.entrypoints=appwrite_web
       - traefik.http.routers.appwrite_api_http.rule=PathPrefix(`/`)
@@ -198,7 +198,7 @@ services:
       - "traefik.enable=true"
       - "traefik.constraint-label-stack=appwrite"
       - "traefik.docker.network=appwrite"
-      - "traefik.http.services.appwrite_realtime.loadbalancer.server.port=80"
+      - "traefik.http.services.appwrite_realtime.loadbalancer.server.port=3001"
       #ws
       - traefik.http.routers.appwrite_realtime_ws.entrypoints=appwrite_web
       - traefik.http.routers.appwrite_realtime_ws.rule=PathPrefix(`/v1/realtime`)
